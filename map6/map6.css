@@ -1,0 +1,44 @@
+/* Leaflet stays inside this component. The surrounding guide keeps its own style. */
+.olm6{position:relative;isolation:isolate;border-radius:12px;overflow:hidden;background:#14264b;color:#eaf3ff;font:14px/1.6 "Microsoft YaHei","PingFang SC",system-ui,sans-serif}
+.olm6,.olm6 *{box-sizing:border-box}
+.olm6-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:7px;padding:10px;background:#1b3159;border-bottom:1px solid #8caad637}
+.olm6 .olm6-button{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:42px;min-height:42px;padding:7px 12px;border:1px solid #7e9ccb66;border-radius:8px;background:#243f6c;color:#f2f7ff;font:13px/1.3 "Microsoft YaHei","PingFang SC",system-ui,sans-serif;text-decoration:none;cursor:pointer;box-shadow:none}
+.olm6 .olm6-button:hover{background:#365789}
+.olm6 .olm6-button:focus-visible,.olm6 a:focus-visible{outline:3px solid #f0c99a;outline-offset:2px}
+.olm6 .olm6-button:disabled{opacity:.65;cursor:wait}
+.olm6-button-location{margin-left:auto}
+.olm6-view{width:100%;height:clamp(380px,60vh,570px);min-height:300px;background:#e7eddf;touch-action:none;color:#243b32;font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif}
+.olm6-view.leaflet-container{font-size:12px;line-height:1.5}
+.olm6 .leaflet-pane,.olm6 .leaflet-tile,.olm6 .leaflet-marker-icon,.olm6 .leaflet-marker-shadow{box-sizing:content-box}
+.olm6 .leaflet-tile{max-width:none!important;max-height:none!important;border:0!important;border-radius:0!important;padding:0!important;margin:0!important;filter:none}
+.olm6 .leaflet-container a{color:#155a87;text-decoration:underline}
+.olm6 .leaflet-control-attribution{max-width:min(96%,600px);background:rgba(255,255,255,.94);color:#3a4650;font:10px/1.45 Arial,sans-serif;padding:3px 6px;border-radius:3px 0 0 0}
+.olm6 .leaflet-control-attribution a{display:inline;min-height:0;min-width:0;padding:0;border:0;border-radius:0;background:none;color:#155a87;font:inherit;text-decoration:underline;box-shadow:none}
+.olm6 .leaflet-control-scale-line{border-color:#435b63;color:#263e43;background:#ffffffe6;font-size:10px;line-height:1.2;text-shadow:none;box-sizing:border-box}
+.olm6 .leaflet-popup-content-wrapper{background:#fffef8;color:#203f3e;border-radius:12px;box-shadow:0 5px 24px #12323738}
+.olm6 .leaflet-popup-tip{background:#fffef8}
+.olm6 .leaflet-popup-content{margin:18px 20px 17px;font:13px/1.7 "Microsoft YaHei","PingFang SC",system-ui,sans-serif;min-width:175px;max-width:280px}
+.olm6 .leaflet-popup-content p{margin:7px 0 12px;color:#49615f;font-size:12px;line-height:1.8}
+.olm6 .leaflet-popup-content strong{display:block;padding-right:17px;color:#183e3b;font-size:15px}
+.olm6 .leaflet-container a.leaflet-popup-close-button{display:flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;width:40px;height:40px;top:1px;right:1px;padding:0;border:0;border-radius:8px;background:transparent;color:#32534e;font:25px/1 Arial,sans-serif;text-decoration:none;box-shadow:none}
+.olm6 .leaflet-popup-content a.olm6-go{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 13px;border-radius:7px;background:#2d5975;color:white;text-decoration:none;font-size:12px;border:0}
+.olm6-pin{background:transparent;border:0}
+.olm6-base-label{background:none;border:0;text-align:center;color:#557681;font:12px/24px "Microsoft YaHei",sans-serif;white-space:nowrap;text-shadow:0 0 3px white,0 0 3px white}
+.olm6-pin span{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:3px solid white;border-radius:50%;background:#204d73;color:white;font:700 13px/1 system-ui,sans-serif;box-shadow:0 2px 8px #172f4066;text-shadow:none;white-space:nowrap}
+.olm6-pin.olm6-parking span{background:#996633}
+.olm6-pin.olm6-gate span{background:#327763}
+.olm6 .leaflet-tooltip.olm6-point-label{padding:3px 7px;background:#fffef7ee;color:#244941;border:1px solid #4e726b55;border-radius:5px;box-shadow:0 1px 5px #173b3322;font:11px/1.5 "Microsoft YaHei",sans-serif;white-space:nowrap}
+.olm6-status{padding:9px 12px;background:#172d51;border-top:1px solid #8caad637;font-size:11px;line-height:1.7;min-height:36px;color:#c9daef}
+.olm6-status[data-level="error"]{color:#f2cc9c}
+.olm6-legend{display:flex;flex-wrap:wrap;gap:6px 13px;padding:8px 12px;background:#14264b;font-size:11px;color:#b9cfe8;border-top:1px solid #8caad626}
+.olm6-legend span{display:inline-flex;align-items:center;gap:6px}
+.olm6-legend i{display:inline-block;width:20px;height:0;border-top:4px solid #d25b37;border-radius:2px}
+.olm6-legend i.olm6-approach{border-top:3px dashed #476b91}
+.olm6-legend i.olm6-position{width:9px;height:9px;border:2px solid white;border-radius:50%;background:#248bd1}
+.olm6:fullscreen,.olm6.olm6-expanded{display:flex;flex-direction:column;position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;max-width:none!important;max-height:none!important;margin:0!important;border:0!important;border-radius:0!important;z-index:2147483000!important;background:#14264b}
+.olm6:fullscreen .olm6-view,.olm6.olm6-expanded .olm6-view{height:auto!important;min-height:0!important;flex:1}
+.olm6:fullscreen .olm6-toolbar,.olm6.olm6-expanded .olm6-toolbar{padding-top:max(10px,env(safe-area-inset-top));flex-shrink:0}
+.olm6:fullscreen .olm6-legend,.olm6.olm6-expanded .olm6-legend{padding-bottom:max(8px,env(safe-area-inset-bottom))}
+.olm6:fullscreen .olm6-status,.olm6.olm6-expanded .olm6-status{flex-shrink:0}
+@media(max-width:600px){.olm6-toolbar{gap:5px;padding:8px}.olm6 .olm6-button{font-size:12px;padding:7px 9px;min-height:42px}.olm6-button-location{margin-left:0}.olm6-view{height:450px;height:min(60dvh,500px);min-height:340px}.olm6 .leaflet-popup-content{max-width:235px;margin:16px 17px}.olm6 .leaflet-control-attribution{font-size:9px}.olm6-legend{font-size:10px;gap:5px 10px}}
+@media(prefers-reduced-motion:reduce){.olm6 *{scroll-behavior:auto!important}}
