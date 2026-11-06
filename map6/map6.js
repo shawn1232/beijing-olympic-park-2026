@@ -84,7 +84,7 @@
       if(approach.length>1){L.polyline(approach,{color:'white',weight:6,opacity:.9,interactive:false}).addTo(layers);L.polyline(approach,{color:'#476b91',weight:3.5,dashArray:'7 6',opacity:1}).addTo(layers);approach.forEach(p=>bounds.extend(p));}
       (section.points||[]).forEach(p=>{
         const ll=[+p.lat,+p.lon];if(!valid(ll))return;const id=String(p.id),parking=id.toUpperCase()==='P'||p.kind==='parking';const gate=p.kind==='gate'||id.toUpperCase()==='G';
-        const label=node('span','',id);const icon=L.divIcon({className:'olm6-pin'+(parking?' olm6-parking':'')+(gate?' olm6-gate':''),html:label.outerHTML,iconSize:[40,40],iconAnchor:[20,20],popupAnchor:[0,-18]});
+        const label=node('span','',id);const icon=L.divIcon({className:'olm6-pin'+(parking?' olm6-parking':'')+(gate?' olm6-gate':''),html:label.outerHTML,iconSize:[44,44],iconAnchor:[22,22],popupAnchor:[0,-20]});
         const marker=L.marker(ll,{icon,title:p.label||id,keyboard:true,alt:p.label||id,riseOnHover:true}).bindPopup(popup(p),{maxWidth:285,autoPanPadding:[20,22],closeButton:true});
         marker.bindTooltip(p.label||id,{direction:gate?'bottom':'top',offset:gate?[0,18]:[0,-18],className:'olm6-point-label',permanent:gate,opacity:1});
         marker.addTo(layers);markers.set(id,marker);bounds.extend(ll);
@@ -103,7 +103,7 @@
       placeholder=document.createComment('OlympicMap fullscreen placeholder');host.parentNode.insertBefore(placeholder,host);document.body.append(host);host.classList.add('olm6-expanded');document.body.style.overflow='hidden';fullscreenState();full.focus();
     }
     function exitFallback(){
-      if(!expanded)return;expanded=false;host.classList.remove('olm6-expanded');if(placeholder?.parentNode){placeholder.parentNode.replaceChild(host,placeholder);}placeholder=null;document.body.style.overflow=restoreOverflow;global.scrollTo({top:restoreScroll,behavior:'instant'});fullscreenState();full.focus({preventScroll:true});
+      if(!expanded)return;expanded=false;host.classList.remove('olm6-expanded');if(placeholder?.parentNode){placeholder.parentNode.replaceChild(host,placeholder);}placeholder=null;document.body.style.overflow=restoreOverflow;global.scrollTo({top:restoreScroll,behavior:'auto'});fullscreenState();full.focus({preventScroll:true});
     }
     async function toggleFullscreen(){
       if(document.fullscreenElement===host){await document.exitFullscreen();return;}
